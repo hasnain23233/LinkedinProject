@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import Platform from "../dropdown/Platform";
+import Industries from "../dropdown/Industries";
+import Customers from "../dropdown/Customers";
+import Resourses from "../dropdown/Resourses";
 
 const Navbar = () => {
     const [openMenu, setOpenMenu] = useState(null); // track which menu is open
@@ -33,16 +37,8 @@ const Navbar = () => {
                             )}
                         </button>
                         {openMenu === "Platform" && (
-                            <div className="absolute left-0 mt-2 w-40 bg-white border rounded-lg shadow-lg">
-                                <a href="#" className="block px-4 py-2 text-sm hover:bg-gray-100">
-                                    Dashboard
-                                </a>
-                                <a href="#" className="block px-4 py-2 text-sm hover:bg-gray-100">
-                                    News
-                                </a>
-                                <a href="#" className="block px-4 py-2 text-sm hover:bg-gray-100">
-                                    Updates
-                                </a>
+                            <div className="absolute left-0 mt-2 w-[800px] p-2 bg-white border rounded-lg shadow-lg">
+                                <Platform />
                             </div>
                         )}
                     </li>
@@ -60,16 +56,8 @@ const Navbar = () => {
                             )}
                         </button>
                         {openMenu === "Industries" && (
-                            <div className="absolute left-0 mt-2 w-40 bg-white border rounded-lg shadow-lg">
-                                <a href="#" className="block px-4 py-2 text-sm hover:bg-gray-100">
-                                    Our Story
-                                </a>
-                                <a href="#" className="block px-4 py-2 text-sm hover:bg-gray-100">
-                                    Team
-                                </a>
-                                <a href="#" className="block px-4 py-2 text-sm hover:bg-gray-100">
-                                    Careers
-                                </a>
+                            <div className="absolute left-0 mt-2 w-60 bg-white border rounded-lg shadow-lg">
+                                <Industries />
                             </div>
                         )}
                     </li>
@@ -87,16 +75,8 @@ const Navbar = () => {
                             )}
                         </button>
                         {openMenu === "Costomers" && (
-                            <div className="absolute left-0 mt-2 w-40 bg-white border rounded-lg shadow-lg">
-                                <a href="#" className="block px-4 py-2 text-sm hover:bg-gray-100">
-                                    Web Development
-                                </a>
-                                <a href="#" className="block px-4 py-2 text-sm hover:bg-gray-100">
-                                    Design
-                                </a>
-                                <a href="#" className="block px-4 py-2 text-sm hover:bg-gray-100">
-                                    SEO
-                                </a>
+                            <div className="absolute left-0 mt-2 w-[380px] p-4 bg-white border rounded-lg shadow-lg">
+                                <Customers />
                             </div>
                         )}
                     </li>
@@ -107,7 +87,8 @@ const Navbar = () => {
                             onClick={() => toggleMenu("contact")}
                             className="flex  items-center justify-center gap-1 hover:text-white hover:bg-black rounded-full m-auto  p-2 w-full focus:outline-none"
                         >
-                            Contact
+
+                            Resources
                             {openMenu === "contact" ? (
                                 <FaChevronUp className="w-3 h-3" />
                             ) : (
@@ -115,16 +96,8 @@ const Navbar = () => {
                             )}
                         </button>
                         {openMenu === "contact" && (
-                            <div className="absolute left-0 mt-2 w-40 bg-white border rounded-lg shadow-lg">
-                                <a href="#" className="block px-4 py-2 text-sm hover:bg-gray-100">
-                                    Email
-                                </a>
-                                <a href="#" className="block px-4 py-2 text-sm hover:bg-gray-100">
-                                    Phone
-                                </a>
-                                <a href="#" className="block px-4 py-2 text-sm hover:bg-gray-100">
-                                    Locations
-                                </a>
+                            <div className="absolute -left-48  p-4 mt-2 w-[850px] bg-white border rounded-lg shadow-lg">
+                                <Resourses />
                             </div>
                         )}
                     </li>
