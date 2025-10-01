@@ -1,7 +1,9 @@
 import React from 'react'
 import homeImage from '../assets/homePage/download.avif'
 import StatsSection from '../components/StatsSection'
-import ScrollingAnimation from '../components/ScrollingAnimation'
+import dropdownImage5 from '../assets/Navbar/dropdownImage5.jpeg'
+import monday from '../assets/Navbar/monday.svg'
+
 
 const home = () => {
     return (
@@ -28,9 +30,19 @@ const home = () => {
                     </div>
                 </div>
             </div>
-            <div className='bg-gray-100'>
+            <div className='bg-gray-100 text-center'>
                 <StatsSection />
-                <ScrollingAnimation />
+                <h1 className='text-5xl'>drive transformative <br /> impact with AI</h1>
+                <div>
+                    <div className='w-11/12 m-auto bg-orange-600'>
+                        <div className='w-3/12 relative '>
+                            <img src={dropdownImage5} alt="" className='border w-full' />
+                            <div className='absolute top-0 left-0 px-4 w-full h-full items-center justify-center flex flex-col bg-black bg-opacity-50 text-white'>
+                                <img src={monday} alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>
