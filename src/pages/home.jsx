@@ -1,5 +1,7 @@
 import React from 'react'
 import homeImage from '../assets/homePage/download.avif'
+import StatsSection from '../components/StatsSection'
+import ScrollingAnimation from '../components/ScrollingAnimation'
 
 const home = () => {
     return (
@@ -26,6 +28,11 @@ const home = () => {
                     </div>
                 </div>
             </div>
+            <div className='bg-gray-100'>
+                <StatsSection />
+                <ScrollingAnimation />
+            </div>
+
         </div>
     )
 }
